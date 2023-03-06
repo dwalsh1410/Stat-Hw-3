@@ -1,0 +1,88 @@
+Question 1
+marks = {"Andy":88, "Amy":66, "James": 90, "Jules": 55, "Arthur": 77}
+def get_student_grade(name, marks):
+  if name in marks:
+    return marks[name]
+  else:
+    print("cannot find students name")
+print(get_student_grade("Andy",marks))
+print(get_student_grade("Jame", marks))
+
+Part 2
+def get_student_average(marks):
+  total_grades=sum(marks.values())
+  num_student=len(marks)
+  average_grade=total_grades/num_student
+  return average_grade
+
+print(get_student_average(marks))
+
+Question 2 
+def print_squares(num):
+  n=0
+  while n<num:
+    print(n, n**2)
+    n+=1
+  else:
+    print("greater than", num)
+
+print_squares(8)
+
+Question 3
+def sum_integers(num):
+  total=0
+  n=1
+  while n<=num:
+    total+=n
+    n+=1
+  print(total)
+
+sum_integers(10)
+
+Question 4 
+def sum_integers_work(num):
+  total=0
+  for n in range(1, num+1):
+    total+=n
+    print(total)
+sum_integers_work(10)
+
+Question 5 
+import math
+def calculate_stats(num):
+  total=sum(nums)
+  mean=total/len(nums)
+  variance=sum((x-mean)**2 for x in nums)/len(nums)
+  std_dev= math.sqrt(variance)
+  return mean, total, std_dev
+
+nums=list(range(1, 100))
+mean, total, std_dev=calculate_stats(nums)
+print(f"Mean: {mean}")
+print(f"Sum:{total}")
+print(f"Standard deviation: {std_dev}")
+
+Question 6
+def my_min(a, b, c, d):
+    min_val = a
+    if b < min_val:
+        min_val = b
+    if c < min_val:
+        min_val = c
+    if d < min_val:
+        min_val = d
+    return min_val
+print(my_min(1,2,100,-3))
+
+Question 7
+def concatenate_strings(str1, str2, str3):
+    concatenated_str = str1 + str2 + str3
+    return concatenated_str
+
+def concatenate_strings(string_list):
+    concatenated_str = ''.join(string_list)
+    return concatenated_str
+
+my_strings = ["Hello", "world", "!"]
+result = concatenate_strings(my_strings)
+print(result)
